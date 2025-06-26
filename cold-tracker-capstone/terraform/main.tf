@@ -211,3 +211,10 @@ module "glue_athena" {
   cur_bucket_name = module.cur_s3_bucket.cur_bucket_name
   environment     = var.environment
 }
+
+module "sns_secret" {
+  source       = "./modules/secrets_manager"
+  secret_name  = "coldtracker/sns_topic_arn"
+  secret_value = var.sns_topic_arn
+}
+

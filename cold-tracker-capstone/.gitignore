@@ -1,2 +1,41 @@
 **/.terraform/
 
+# Ignore PEM, CRT, KEY files (certificates and private keys)
+*.pem
+*.key
+*.crt
+
+# Ignore dotenv environment files
+*.env
+
+# Ignore Terraform state files and backups
+*.tfstate
+*.tfstate.backup
+
+# Ignore Terraform directories
+.terraform/
+
+# Ignore local override files for Terraform
+override.tf
+override.tf.json
+*_override.tf
+*_override.tf.json
+
+# Ignore secrets auto vars files with sensitive values
+*.auto.tfvars
+*.auto.tfvars.json
+
+# Ignore node_modules if using Node.js in Lambda or other modules
+node_modules/
+
+# Ignore log files
+*.log
+
+# Ignore other sensitive JSON or config files you want to keep out of git
+cert_output.json
+
+# Ignore IDE/editor configs (optional)
+.vscode/
+.idea/
+*.iml
+

@@ -26,4 +26,15 @@ variable "environment" {
   default     = "dev"
 }
 
+variable "sns_topic_arn" {
+  description = "The ARN of the SNS topic used in Lambda"
+  type        = string
+  sensitive   = true
+}
+
+variable "coldtracker_secrets" {
+  description = "Key-value pairs to store in AWS Secrets Manager"
+  type        = map(string)
+}
+
 
